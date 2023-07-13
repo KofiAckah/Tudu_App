@@ -1,22 +1,21 @@
-import React,{useState} from 'react';
-import { StyleSheet, Text, View,SafeAreaView,Platform,StatusBar } from 'react-native';
-import {HomeScreen} from './Screen/Home/HomeScreen';
+import * as React from 'react';
+import Main from './Screen/Main';
+import {View, StyleSheet,Platform,StatusBar } from 'react-native';
 
-const App = () => {
-  const [focusSubject, setFocusSubject] = useState(null)
+
+function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <HomeScreen/>
-    </SafeAreaView>
-  )
+    <View style={styles.container}>
+      <Main />
+    </View>
+  );
 }
-
-export default App
 
 const styles = StyleSheet.create({
   container: { 
     flex: 1,
-    backgroundColor: '#f0f',
+    backgroundColor: '#fff',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   }
 })
+export default App;

@@ -1,13 +1,14 @@
-import { View,TouchableWithoutFeedback ,Image, Text, StyleSheet } from 'react-native';
+import { View, TouchableOpacity,TouchableWithoutFeedback ,Image, Text, StyleSheet,ScrollView } from 'react-native';
 import React from 'react';
 
-export const HomeCategories = ({ onPress, imageSource, title }) => {
+export const Popular = ({ onPress, imageSource, price,minititle }) => {
   return (
-    <TouchableWithoutFeedback onPress={onPress}>
+    <TouchableWithoutFeedback style={styles.view} onPress={onPress}>
       <View style={styles.view}>
         <View style={styles.button}>
             <Image source={imageSource} style={styles.image} resizeMode="contain" />
-            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.minititle}>{minititle}</Text>
+            <Text style={styles.price}>{price}</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -16,7 +17,7 @@ export const HomeCategories = ({ onPress, imageSource, title }) => {
 
 const styles = StyleSheet.create({
     view:{
-        paddingBottom: 20,
+        paddingBottom: 50,
     },
     button: {
       backgroundColor: '#F5F5F5',
@@ -27,22 +28,30 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       justifyContent: 'center', // 'flex-end', 'center', 'space-between', 'space-around
       alignItems: 'center', // 'flex-start', 'flex-end', 'center', 'stretch
-      width: 70,
-      height: 70,
+      width: 150,
+      height: 130,
     },
     image: {
-      width: 70,
-      height: 70,
-      borderRadius: 10,
+      width: 90,
+      height: 90,
     },
-    title: {
+    price: {
       position: 'absolute',
-      fontSize: 13,
+      fontSize: 15,
       color: 'black',
-      fontWeight: 400,
+      fontWeight: 600,
+      alignSelf:"flex-end",
+      bottom: -40,
+      left: 0,
+    },
+    minititle: {
+      position: 'absolute',
+      fontSize: 12,
+      color: 'black',
+      fontWeight: 300,
       alignSelf:"flex-end",
       bottom: -20,
-      // left: 0,
-    },
+      left: 0,
+    }
     });
   

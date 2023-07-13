@@ -1,35 +1,23 @@
-import { View, TouchableOpacity, Image, Text, StyleSheet,ScrollView } from 'react-native';
+import { View, TouchableWithoutFeedback, Image, Text, StyleSheet } from 'react-native';
 import React from 'react'
 
-export const ShopsButton = (onPress, imageSource) => {
+export const ShopsButton = ({onPress, imageSource}) => {
   return (
-    <View>
-    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  style={styles.cateBtn}>
-      <TouchableOpacity style={styles.button} onPress={() => alert("Image would appear soon")}>
-        <Image source={require('../../assets/icon.png')} style={styles.image} resizeMode="contain" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => alert("Image would appear soon")}>
-        <Image source={require('../../assets/icon.png')} style={styles.image} resizeMode="contain" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => alert("Image would appear soon")}>
-        <Image source={require('../../assets/icon.png')} style={styles.image} resizeMode="contain" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => alert("Image would appear soon")}>
-        <Image source={require('../../assets/icon.png')} style={styles.image} resizeMode="contain" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => alert("Image would appear soon")}>
-        <Image source={require('../../assets/icon.png')} style={styles.image} resizeMode="contain" />
-      </TouchableOpacity>
-    </ScrollView>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.view}>
+        <View style={styles.button}>
+            <Image source={imageSource} style={styles.image} resizeMode="contain" />
+        </View>
       </View>
+    </TouchableWithoutFeedback>
   )
 }
 const styles = StyleSheet.create({
-  cateBtn: {
-    alignContent: 'center',
+  view: {
+    
   },
   button: {
-    // backgroundColor: 'white',
+    backgroundColor: 'white',
     marginTop: 20,
     marginLeft: 20,
     borderRadius: 10,
@@ -43,7 +31,6 @@ const styles = StyleSheet.create({
   image: {
     width: 90,
     height: 90,
-    marginRight: 10,
     borderRadius: 10,
   },
   });
