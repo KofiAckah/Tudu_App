@@ -1,3 +1,4 @@
+// Popuplar component for home screen
 import { View, TouchableOpacity,TouchableWithoutFeedback ,Image, Text, StyleSheet,ScrollView } from 'react-native';
 import React from 'react';
 

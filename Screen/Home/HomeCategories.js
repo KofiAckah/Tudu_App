@@ -1,3 +1,4 @@
+// Category Component for Home Screen
 import { View,TouchableWithoutFeedback ,Image, Text, StyleSheet } from 'react-native';
 import React from 'react';
 
@@ -21,7 +22,8 @@ const styles = StyleSheet.create({
     button: {
       backgroundColor: '#F5F5F5',
       marginTop: 20,
-      marginLeft: 20,
+      marginLeft: 10,
+      marginRight: 10,
       borderRadius: 10,
       flexDirection: 'row',
       borderRadius: 10,
@@ -31,8 +33,8 @@ const styles = StyleSheet.create({
       height: 70,
     },
     image: {
-      width: 70,
-      height: 70,
+      width: 50,
+      height: 50,
       borderRadius: 10,
     },
     title: {

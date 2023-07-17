@@ -1,3 +1,4 @@
+// search bar for home screen
 import { StyleSheet, Text, View,TextInput } from 'react-native'
 import React,{useState} from 'react'
 import { Ionicons } from '@expo/vector-icons';

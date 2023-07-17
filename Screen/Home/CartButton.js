@@ -1,3 +1,4 @@
+// Cart button on the top right corner of the home screen
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';

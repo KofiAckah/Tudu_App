@@ -1,4 +1,5 @@
-import { View, TouchableOpacity,TouchableWithoutFeedback ,Image, Text, StyleSheet,ScrollView } from 'react-native';
+// Sales component for home screen
+import { View,TouchableWithoutFeedback ,Image, Text, StyleSheet,ScrollView } from 'react-native';
 import React from 'react';
 
 export const Sales = ({ onPress, imageSource, price,minititle }) => {
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginLeft: 10,
         borderRadius: 10,
+        shadowColor: '#f00',
     },
     button: {
       marginTop: 10,
@@ -31,13 +33,17 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       justifyContent: 'center', // 'flex-end', 'center', 'space-between', 'space-around
       alignItems: 'center', // 'flex-start', 'flex-end', 'center', 'stretch
-      width: 160,
+      width: "50%",
       height: 190,
+      
     },
     image: {
+      marginLeft: 10,
       borderRadius: 10,
       width: 130,
       height: 160,
+      left: 35,
+      // marginHorizontal: 35,
     },
     price: {
       position: 'absolute',
@@ -45,7 +51,7 @@ const styles = StyleSheet.create({
       color: 'black',
       fontWeight: 600,
       alignSelf:"flex-end",
-      bottom: -40,
+      bottom: -42,
       left: 10,
     },
     minititle: {
@@ -54,6 +60,7 @@ const styles = StyleSheet.create({
       color: 'grey',
       fontWeight: 600,
       alignSelf:"flex-end",
+      width: 100,
       bottom: -20,
       left: 10,
     }

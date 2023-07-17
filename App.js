@@ -1,3 +1,4 @@
+// The main file of the app
 import * as React from 'react';
 import Main from './Screen/Main';
 import {View, StyleSheet,Platform,StatusBar } from 'react-native';
@@ -14,7 +15,7 @@ function App() {
 const styles = StyleSheet.create({
   container: { 
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   }
 })

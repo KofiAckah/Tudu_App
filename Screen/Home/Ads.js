@@ -1,10 +1,11 @@
+// Ads component for home screen
 import React, { useState, useEffect } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
 const IMAGES = [
-  { id: 1, source: require('../../assets/icon.png') },
-  { id: 2, source: require('../../assets/ads.jpg') },
-  { id: 3, source: require('../../assets/favicon.png') },
+  { id: 1, source: {uri:'https://images.pexels.com/photos/4389666/pexels-photo-4389666.jpeg?auto=compress&cs=tinysrgb&w=400'} },
+  { id: 2, source: {uri:'https://adexchanger.com/wp-content/uploads/2019/12/CheezIt_Teaser1_Still.png'} },
+  { id: 3, source: {uri:'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/premium-burger-ads-design-template-7559bd58cfc8ff20e3d89ef50d5209c8_screen.jpg?ts=1651048364'} },
 ];
 
 export const Ads = () => {

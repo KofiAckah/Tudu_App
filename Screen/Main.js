@@ -1,7 +1,10 @@
+// The bottom navigation bar is created in this file.
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import 'react-native-gesture-handler';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Screens
 import {HomeScreen} from './Home/HomeScreen';
@@ -9,6 +12,8 @@ import {Cat} from './Categories/Cat';
 import {Mainshop} from './Shop/Mainshop';
 import {Favorites} from './Favorites/Favorites';
 import {Profile} from './Profile/Profile';
+import { Index } from './Index';
+
 
 //Screen names
 const homeName = "Home";
@@ -16,6 +21,7 @@ const catName = "Cat";
 const shopName = "Shop";
 const favName = "Favorites";
 const profileName = "Profile";
+const indexName = "Index"; //Is Now the HomeScreen
 
 const Tab = createBottomTabNavigator();
 
@@ -29,10 +35,8 @@ function Main() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
             let rn = route.name;
-
-            if (rn === homeName) {
+            if (rn === indexName) {
               iconName = focused ? 'home' : 'home-outline';
-
             } else if (rn === catName) {
               iconName = focused ? 'list' : 'list-outline';
             }
@@ -54,7 +58,8 @@ function Main() {
           showLabel: false,
         }}>
 
-        <Tab.Screen name={homeName} component={HomeScreen} />
+        <Tab.Screen name={indexName} component={Index} />
+        {/* <Tab.Screen name={homeName} component={HomeScreen} /> */}
         <Tab.Screen name={catName} component={Cat} />
         <Tab.Screen name={shopName} component={Mainshop} />
         <Tab.Screen name={favName} component={Favorites} />
