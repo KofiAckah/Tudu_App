@@ -15,8 +15,8 @@ export const Address = () => {
   const [phone, setPhone] = useState('');
   const [altphone, setAltphone] = useState('');
 
-  const ddress = () => {
-    navigation.navigate('Try7', {fname: fname, lname: lname, floor: floor, info: info, region: region, locality: locality, phone: phone, altphone: altphone});
+  const handleSave = () => {
+    navigation.navigate('CheckOut', {fname: fname, lname: lname, floor: floor, info: info, region: region, locality: locality, phone: phone, altphone: altphone});
   }
 
   const handleBackPress = () => {
@@ -69,7 +69,7 @@ export const Address = () => {
           onChangeText={(text) => setAltphone(text)}
         />
         </View>
-        <Button title="Save" style={styles.btn} onPress={ddress}/>
+        <Button title="Save" style={styles.btn} onPress={handleSave}/>
       </ScrollView>
     </View>
   )

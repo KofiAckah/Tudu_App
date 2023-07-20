@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen } from './Home/HomeScreen'; 
 
 import { Try2 } from './Categories/Try2';
-import { Try7 } from './Shop/Try7';
+import { CheckOut } from './Shop/CheckOut';
 
 // Importing Screen for each Categories
 import { Card1 } from '../Data/CateDB/Card1';
@@ -78,7 +78,7 @@ export const Index = () => {
       <Stack.Screen name="ShopDetail" component={ShopDetail} />
       <Stack.Screen name="Address" component={Address} />
       <Stack.Screen name="Try2" component={Try2} />
-      <Stack.Screen name="Try7" component={Try7} />
+      <Stack.Screen name="CheckOut" component={CheckOut} />
     </Stack.Navigator>
   );
 };

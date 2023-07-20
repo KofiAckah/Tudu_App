@@ -112,31 +112,31 @@ export const HomeScreen = () => {
                 <Text style={styles.leftText}>Popular Products</Text>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                <Popular imageSource={{uri:'https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_1280.jpg'}}
+                <Popular imageSource={Details[1].imageSource}
                 price={Details[1].title}  minititle={Details[1].minititle} onPress={() => navigation.navigate('Card',{
                     title:Details[1].title,
                     minititle:Details[1].minititle,
                     imageSource:Details[1].imageSource,
                 })}/>
-                <Popular imageSource={{uri:'https://images.pexels.com/photos/3809176/pexels-photo-3809176.jpeg?auto=compress&cs=tinysrgb&w=400'}}
+                <Popular imageSource={Details[0].imageSource}
                 price={Details[0].title}  minititle={Details[0].minititle} onPress={() => navigation.navigate('Card',{
                     title:Details[0].title,
                     minititle:Details[0].minititle,
                     imageSource:Details[0].imageSource,
                 })}/>
-                <Popular imageSource={{uri:'https://cdn.pixabay.com/photo/2017/03/15/17/49/belt-2146914_640.jpg'}}
+                <Popular imageSource={Details[2].imageSource}
                 price={Details[2].title}  minititle={Details[2].minititle} onPress={() => navigation.navigate('Card',{
                     title:Details[2].title,
                     minititle:Details[2].minititle,
                     imageSource:Details[2].imageSource,
                 })}/>
-                <Popular imageSource={{uri:'https://cdn.pixabay.com/photo/2014/10/07/09/17/earphones-477446_640.jpg'}}
+                <Popular imageSource={Details[3].imageSource}
                 price={Details[3].title}  minititle={Details[3].minititle} onPress={() => navigation.navigate('Card',{
                     title:Details[3].title,
                     minititle:Details[3].minititle,
                     imageSource:Details[3].imageSource,
                 })}/>
-                <Popular imageSource={{uri:'https://media.istockphoto.com/id/1331144881/photo/a-black-mifi-device.jpg?b=1&s=612x612&w=0&k=20&c=Uste0jMjxVl8sPG0ck-IggETYjbkgxvmtSuShgcf4hI='}}
+                <Popular imageSource={Details[4].imageSource}
                 price={Details[4].title}  minititle={Details[4].minititle} onPress={() => navigation.navigate('Card',{
                     title:Details[4].title,
                     minititle:Details[4].minititle,
@@ -145,10 +145,20 @@ export const HomeScreen = () => {
             </ScrollView>
             {/* Sponsored View */}
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                <Sponsored imageSource={require('../../assets/icon.png')}
-                onPress={()=>{alert('Selected Beard Oil')}}/>
-                <Sponsored imageSource={require('../../assets/icon.png')}
-                onPress={()=>{alert('Selected Beard Oil')}}/>
+                <Sponsored imageSource={ShopInfo[2].imageSource}
+                onPress={() => navigation.navigate('ShopDetail',{
+                    shopName:ShopInfo[2].shopName,
+                    shopLocation:ShopInfo[2].shopLocation,
+                    imageSource:ShopInfo[2].imageSource,
+                    region:ShopInfo[2].region,
+                })}/>
+                <Sponsored imageSource={Details[10].imageSource}
+                onPress={() => navigation.navigate('ShopDetail',{
+                    shopName:ShopInfo[2].shopName,
+                    shopLocation:ShopInfo[2].shopLocation,
+                    imageSource:ShopInfo[2].imageSource,
+                    region:ShopInfo[2].region,
+                })}/>
             </ScrollView>
             {/* Sales */}
             {/* Made in Ghana */}
