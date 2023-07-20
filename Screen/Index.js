@@ -3,8 +3,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen } from './Home/HomeScreen'; 
-import { Card } from './Categories/Card';
+
 import { Try2 } from './Categories/Try2';
+import { Try7 } from './Shop/Try7';
 
 // Importing Screen for each Categories
 import { Card1 } from '../Data/CateDB/Card1';
@@ -34,7 +35,10 @@ import { Smartphones } from './Special/Smartphones';
 import { Womencloth } from './Special/Womencloth';
 import { Vegetables } from './Special/Vegetables';
 
+// Importing Sub Screen 
+import { Card } from './Categories/Card';
 import { ShopDetail } from './Shop/ShopDetail';
+import { Address } from './Shop/Address';
 
 
 const Stack = createStackNavigator();
@@ -43,7 +47,6 @@ export const Index = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Card" component={Card} />
       {/* Screen for each Categories */}
       <Stack.Screen name="Card1" component={Card1} />
       <Stack.Screen name="Arts" component={Arts} />
@@ -70,9 +73,12 @@ export const Index = () => {
       <Stack.Screen name="Smartphones" component={Smartphones} />
       <Stack.Screen name="Womencloth" component={Womencloth} />
       <Stack.Screen name="Vegetables" component={Vegetables} />
-
+      {/* Sub Screen */}
+      <Stack.Screen name="Card" component={Card} />
       <Stack.Screen name="ShopDetail" component={ShopDetail} />
+      <Stack.Screen name="Address" component={Address} />
       <Stack.Screen name="Try2" component={Try2} />
+      <Stack.Screen name="Try7" component={Try7} />
     </Stack.Navigator>
   );
 };

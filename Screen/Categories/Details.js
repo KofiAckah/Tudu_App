@@ -1,9 +1,9 @@
 // Contains some kind of database for the details of the products
 
 export const Details =[
-    {   // 0.Bread Oil
+    {   // 0.Beard Oil
         title:"GHS 90.00",
-        minititle:"Bread Oil",
+        minititle:"Beard Oil",
         imageSource:{uri:'https://images.pexels.com/photos/3809176/pexels-photo-3809176.jpeg?auto=compress&cs=tinysrgb&w=400'},
     },
     {   // 1.Nike stuzzy(white)

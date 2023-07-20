@@ -7,9 +7,9 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/logo.png",
+      "image": "./assets/tudu-logo.png",
       "backgroundColor": "#ffffff",
-      "resizeMode": "cover"
+      "resizeMode": "contain"
     },
     "assetBundlePatterns": [
       "**/*"

@@ -12,7 +12,9 @@ export const Card = ({route}) => {
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
-    setCount(count + 1);
+    if (count < 8) {
+      setCount(count + 1);
+    }
   };
 
   const decrementCount = () => {
@@ -44,7 +46,7 @@ export const Card = ({route}) => {
           <Text onPress={incrementCount} style={styles.button} marginLeft={30}>+</Text>
           <Ionicons name="heart" size={25} style={styles.heart} onPress={handleBackPress}/>
           <Ionicons name="cart-outline" size={25} style={styles.cart} onPress={handleBackPress}/>
-          <Text style={styles.buyNow}>Buy Now</Text>
+          <Text style={styles.buyNow} onPress={() =>navigation.navigate('Address')}>Buy Now</Text>
         </View>
     </View>
   )
