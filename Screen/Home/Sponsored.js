@@ -9,7 +9,7 @@ export const Sponsored = ({ onPress, imageSource}) => {
         <View style={styles.button}>
             <Image source={imageSource} style={styles.image} resizeMode="contain" />
             <Text style={styles.shopNow} onPress={onPress}>Shop Now</Text>
-            <Text style={styles.sponsored}>Sponsored</Text>
+            <Text style={styles.sponsored}>Sponsored</Text>            
         </View>
       </View>
     </TouchableWithoutFeedback>

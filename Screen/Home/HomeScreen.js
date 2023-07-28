@@ -97,7 +97,7 @@ export const HomeScreen = () => {
             </ScrollView>
             <Ads/>
             {/* Special for you View */}
-            <View style={styles.textLabel}>
+            <View style={styles.textLabel} >
                 <Text style={styles.leftText}>Special for you</Text>
                 <Text onPress={handleSeeMore}>See more</Text>
             </View>
