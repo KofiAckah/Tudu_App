@@ -3,16 +3,11 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-export const CartButton = ({ onPress, cartItemCount }) => {
+export const CartButton = () => {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity>
     <View style={styles.container}>
       <Ionicons name="cart" size={24} color="#555" style={styles.icon}/>
-      {/* {cartItemCount > 0 && (
-        <View style={styles.badge}>
-          <Text style={styles.badgeText}>{cartItemCount}</Text>
-        </View>
-      )} */}
       </View>
     </TouchableOpacity>
   );

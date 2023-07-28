@@ -36,7 +36,7 @@ export const HomeScreen = () => {
             {/* Search and Cart View */}
             <View style={styles.searchCart}>
                 <Search />
-                <CartButton/>
+                <CartButton onPress={navigation.navigate('CartPage')}/>
             </View>
             {/* Categories View */}
             <View style={styles.textLabel}>

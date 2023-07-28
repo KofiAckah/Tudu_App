@@ -37,6 +37,7 @@ import { Vegetables } from './Special/Vegetables';
 
 // Importing Sub Screen 
 import { Card } from './Categories/Card';
+import { CartPage } from './Home/CartPage';
 import { ShopDetail } from './Shop/ShopDetail';
 import { Address } from './Shop/Address';
 
@@ -75,6 +76,7 @@ export const Index = () => {
       <Stack.Screen name="Vegetables" component={Vegetables} />
       {/* Sub Screen */}
       <Stack.Screen name="Card" component={Card} />
+      <Stack.Screen name="CartPage" component={CartPage} />
       <Stack.Screen name="ShopDetail" component={ShopDetail} />
       <Stack.Screen name="Address" component={Address} />
       <Stack.Screen name="Try2" component={Try2} />
