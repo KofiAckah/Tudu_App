@@ -10,7 +10,7 @@ export const SignIn = () => {
     const [password, setPassword] = useState('');
 
     const handleBackPress = () => {
-      navigation.goBack();
+        navigation.navigate('Profile');
     };
     return (
       <View style={styles.container}>
@@ -34,8 +34,14 @@ export const SignIn = () => {
                 secureTextEntry={true}
             />
             <Ionicons name="lock-closed-outline" size={38} style={styles.icon}/>
-            <Text onPress={() => navigation.navigate('Home')} style={styles.signIn}> Sign In </Text>
+            <Text onPress={() => navigation.navigate('Home')} style={styles.signIn}>Sign In</Text>
+            <View flexDirection='row' justifyContent= 'center'>
+                <Text style={styles.text}>Don't have an account?</Text>
+                <Text style={styles.signUp}>Sign Up</Text>
+            </View>
+            <Text style={styles.guest} onPress={() => navigation.navigate('Home')}>Continue as Guest &gt;&gt;&gt;</Text>
         </View>
+        <Text style={styles.bottomText}>By Continuing you confirm that you agree with our Terms and Conditions</Text>
       </View>
     )
   }
@@ -98,5 +104,26 @@ export const SignIn = () => {
         fontSize: 25,
         backgroundColor: '#22aaff',
         color: '#fff',
+    },
+    text: {
+        marginTop:40,
+        fontSize: 20,
+    },
+    signUp: {
+        marginTop:40,
+        fontSize: 20,
+        color: '#22aaff',
+    },
+    guest: {
+        marginTop:10,
+        fontSize: 20,
+        color: '#22aaff',
+        textAlign: 'center',
+    },
+    bottomText: {
+        position: 'absolute',        
+        marginHorizontal: 50,
+        textAlign: 'center',
+        bottom: 25,
     },
   });

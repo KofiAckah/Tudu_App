@@ -8,6 +8,9 @@ export const Profile = () => {
   const handleBackPress = () => {
     navigation.navigate('Home');
   };
+  const handleSignIn = () => {
+    navigation.navigate('SignIn');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.fixed}>
@@ -16,20 +19,20 @@ export const Profile = () => {
       </View>
       <ScrollView style={styles.main}>
         <Ionicons name="person"size={150} style={styles.person}/>
-        <View style={styles.select}>
-          <Ionicons name="person-outline"size={35} color="#0099ff"/>
-          <Text style={styles.itemName}>My Account</Text>
-          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000"/>
+        <View style={styles.select} >
+          <Ionicons name="person-outline"size={35} color="#0099ff" />
+          <Text style={styles.itemName} onPress={handleSignIn}>My Account</Text>
+          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000" onPress={handleSignIn}/>
         </View>
-        <View style={styles.select}>
+        <View style={styles.select} >
           <Ionicons name="pricetags-outline"size={35} color="#0099ff"/>
-          <Text style={styles.itemName}>Orders</Text>
-          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000"/>
+          <Text style={styles.itemName} onPress={handleSignIn}>Orders</Text>
+          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000" onPress={handleSignIn}/>
         </View>
         <View style={styles.select}>
           <Ionicons name="location"size={35} color="#0099ff"/>
-          <Text style={styles.itemName}>Delivery Address</Text>
-          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000"/>
+          <Text style={styles.itemName} onPress={handleSignIn}>Delivery Address</Text>
+          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000" onPress={handleSignIn}/>
         </View>
         <View style={styles.select}>
           <Ionicons name="home"size={35} color="#0099ff"/>
@@ -41,7 +44,7 @@ export const Profile = () => {
           <Text style={styles.itemName}>Help Center</Text>
           <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000"/>
         </View>
-        <Text style={styles.signIn} onPress={()=> navigation.navigate('SignIn')}> Sign In </Text>
+        <Text style={styles.signIn}onPress={handleSignIn}>Sign In</Text>
       </ScrollView>
     </View>
   )
@@ -66,7 +69,6 @@ const styles = StyleSheet.create({
   },
   main: {
     marginTop: 50,
-    // backgroundColor: '#f0f',
   },
   person: {
     borderRadius: 100,
@@ -87,7 +89,7 @@ const styles = StyleSheet.create({
   itemName: {
     fontSize: 20,
     alignSelf: 'center',
-    color: 'grey',  
+    color: 'grey',
   },
   signIn: {
     marginTop: 20,
