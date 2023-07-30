@@ -55,6 +55,7 @@ function Main() {
           inactiveTintColor: 'grey',
           labelStyle: { paddingBottom: 10, fontSize: 10 },
           style: { padding: 10, height: 70},
+          tabBarShowLabel: false,
           showLabel: false,
         }}>
 

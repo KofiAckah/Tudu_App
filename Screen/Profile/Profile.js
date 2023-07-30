@@ -1,4 +1,4 @@
-import { TouchableOpacity,StyleSheet, Text, View,ScrollView,TextInput } from 'react-native'
+import { StyleSheet, Text, View,ScrollView } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -41,7 +41,7 @@ export const Profile = () => {
           <Text style={styles.itemName}>Help Center</Text>
           <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000"/>
         </View>
-        <Text style={styles.signIn}> Sign In </Text>
+        <Text style={styles.signIn} onPress={()=> navigation.navigate('SignIn')}> Sign In </Text>
       </ScrollView>
     </View>
   )
