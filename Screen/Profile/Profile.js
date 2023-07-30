@@ -36,13 +36,13 @@ export const Profile = () => {
         </View>
         <View style={styles.select}>
           <Ionicons name="home"size={35} color="#0099ff"/>
-          <Text style={styles.itemName}>Sell Central</Text>
-          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000"/>
+          <Text style={styles.itemName} onPress={handleSignIn}>Sell Central</Text>
+          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000" onPress={handleSignIn}/>
         </View>
         <View style={styles.select}>
           <Ionicons name="help-circle-outline"size={35} color="#0099ff"/>
-          <Text style={styles.itemName}>Help Center</Text>
-          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000"/>
+          <Text style={styles.itemName} onPress={()=>navigation.navigate('Help')}>Help Center</Text>
+          <Ionicons name="chevron-forward" marginLeft={10} size={35} color="#000" onPress={()=>navigation.navigate('Help')}/>
         </View>
         <Text style={styles.signIn}onPress={handleSignIn}>Sign In</Text>
       </ScrollView>
