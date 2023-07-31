@@ -1,7 +1,7 @@
 // Home Screen Code:
-import { StyleSheet, Text, View,ScrollView,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View,ScrollView} from 'react-native';
 import React,{useState} from 'react';
-import { NavigationContainer, useNavigation, CommonActions } from '@react-navigation/native';
+import { NavigationContainer, useNavigation, } from '@react-navigation/native';
 
 
 // Tools & Components

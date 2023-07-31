@@ -2,12 +2,11 @@
 import * as React from 'react';
 import Main from './Screen/Main';
 import {View, StyleSheet,Platform,StatusBar } from 'react-native';
-import { Profile } from './Screen/Profile/Profile';
 
 
 function App() {
   return (
-    <View style={styles.container}>    
+    <View style={styles.container}>
       <Main />
     </View>
   );
