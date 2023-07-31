@@ -32,6 +32,10 @@ export const Favorites = () => {
         <Text style={[styles.text, isText1Selected && styles.selectedText]} onPress={handleText1Press}>Whilist</Text>
         <Text style={[styles.text, isText2Selected && styles.selectedText]} onPress={handleText2Press}>Stores</Text>
       </View>
+      <Ionicons style={styles.icon} name="thunderstorm-outline" marginLeft={10} size={90} color="#000"/>
+      <Text style={styles.info}>
+        {isText1Selected ? 'Sorry no whilist yet ' : 'Sorry no stores yet'}
+      </Text>
     </View>
   )
 }
@@ -71,5 +75,18 @@ const styles = StyleSheet.create({
     color: '#22ddff',
     borderBottomColor: '#22ddff',
     borderBottomWidth: 2.5,
+  },
+  icon:{
+    position: 'absolute',
+    alignSelf: 'center',
+    marginTop: 250,
+    color: '#22ddff',
+  },
+  info: {
+    position: 'absolute',
+    alignSelf: 'center',
+    textAlignVertical: 'center',
+    fontSize: 20,
+    marginTop: 380,
   },
 });
