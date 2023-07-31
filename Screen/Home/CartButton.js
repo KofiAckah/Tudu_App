@@ -2,10 +2,12 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { NavigationContainer, useNavigation, } from '@react-navigation/native';
 
 export const CartButton = () => {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=>navigation.navigate('CartPage')}>
     <View style={styles.container}>
       <Ionicons name="cart" size={24} color="#555" style={styles.icon}/>
       </View>

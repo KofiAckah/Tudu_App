@@ -27,9 +27,6 @@ export const HomeScreen = () => {
   const handlesMoreShops = () => {
     navigation.navigate('Shop');
   };
-  const handlesTry2 = () => {
-    navigation.navigate('Try2');
-  };
   return (
     <View style={styles.container}>
         <ScrollView>
