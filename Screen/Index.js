@@ -35,10 +35,14 @@ import { Smartphones } from './Special/Smartphones';
 import { Womencloth } from './Special/Womencloth';
 import { Vegetables } from './Special/Vegetables';
 
+// Importing Screen for Profile
+import { Help } from './Profile/Help';
+import { SignIn } from './Profile/SignIn';
+import { SignUp } from './Profile/SignUp';
+
 // Importing Sub Screen 
 import { Card } from './Categories/Card';
 import { ShopDetail } from './Shop/ShopDetail';
-import { SignIn } from './Profile/SignIn';
 import { Address } from './Shop/Address';
 
 
@@ -74,9 +78,12 @@ export const Index = () => {
       <Stack.Screen name="Smartphones" component={Smartphones} />
       <Stack.Screen name="Womencloth" component={Womencloth} />
       <Stack.Screen name="Vegetables" component={Vegetables} />
+      {/* Screen for each Profile */}
+      <Stack.Screen name="Help" component={Help}/>
+      <Stack.Screen name="SignIn" component={SignIn}/>
+      <Stack.Screen name="SignUp" component={SignUp}/>
       {/* Sub Screen */}
       <Stack.Screen name="Card" component={Card} />
-      <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="ShopDetail" component={ShopDetail} />
       <Stack.Screen name="Address" component={Address} />
       <Stack.Screen name="Try2" component={Try2} />

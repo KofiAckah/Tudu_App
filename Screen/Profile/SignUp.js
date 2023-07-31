@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
-import { View, Text, Button,StyleSheet,ScrollView,TextInput,Image } from 'react-native';
+import { View, Text, StyleSheet,ScrollView,TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export const SignIn = () => {  
+export const SignUp = () => {  
     const navigation = useNavigation();
 
     const [email, setEmail] = useState('');
@@ -16,32 +16,35 @@ export const SignIn = () => {
       <View style={styles.container}>
         <View style={styles.fixed}>
           <Ionicons name="arrow-back" marginLeft={10} size={25} color="#000" onPress={handleBackPress}/>
-          <Text style={styles.titleText}>Sign In</Text>
+          <Text style={styles.titleText}>Register</Text>
         </View>
-        <View style={styles.context}>
-        <Text style={styles.welcome}>Welcome Back</Text>
-        <Text style={styles.topText}>Sign in with your email and password</Text>
+        <ScrollView style={styles.context}>
+            <Text style={styles.welcome}>Register Account</Text>
+            <Text style={styles.topText}>Complete your details to sign up with Tudu</Text>
+            <TextInput style={styles.input} placeholder="First Name"/>
+            <TextInput style={styles.input} placeholder="Last Name"/>
             <TextInput  style={styles.input}
                 placeholder="Email"
                 value={email}
                 onChangeText={(text) => setEmail(text)}
                 type='email'
             />
-            <Ionicons name="mail-outline" size={38} style={styles.icon}/>
-            <TextInput style={styles.input} placeholder="Enter your password" 
-                value={password}
-                onChangeText={(text) => setPassword(text)}
-                secureTextEntry={true}
+            <TextInput style={styles.input} placeholder="Country"/>
+            <TextInput style={styles.input} placeholder="Password" 
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+            secureTextEntry={true}
             />
-            <Ionicons name="lock-closed-outline" size={38} style={styles.icon}/>
-            <Text onPress={() => navigation.navigate('Home')} style={styles.signIn}>Sign In</Text>
+            <TextInput style={styles.input} placeholder="Confirm Password" 
+            secureTextEntry={true}
+            />
+            <Text onPress={() => navigation.navigate('Home')} style={styles.signUp}>Sign Up</Text>
             <View flexDirection='row' justifyContent= 'center'>
-                <Text style={styles.text}>Don't have an account?</Text>
-                <Text style={styles.signUp} onPress={() => navigation.navigate('SignUp')}>Sign Up</Text>
+                <Text style={styles.text}>Already have an account?</Text>
+                <Text style={styles.signIn} onPress={() => navigation.navigate('SignIn')}>Sign In</Text>
             </View>
-            <Text style={styles.guest} onPress={() => navigation.navigate('Home')}>Continue as Guest &gt;&gt;&gt;</Text>
-        </View>
-        <Text style={styles.bottomText}>By Continuing you confirm that you agree with our Terms and Conditions</Text>
+            <Text style={styles.bottomText}>By Continuing you confirm that you agree with our Terms and Conditions</Text>
+        </ScrollView>
       </View>
     )
   }
@@ -75,7 +78,8 @@ export const SignIn = () => {
     topText: {
         textAlign: 'center',
         fontSize: 15,
-        marginBottom: 60,
+        marginBottom: 20,
+        marginHorizontal: 100,
     },
     input: {
       marginHorizontal: 40,
@@ -87,14 +91,14 @@ export const SignIn = () => {
       borderRadius: 40,
       paddingLeft: 30,
       fontSize: 20,
-      marginTop: -25,
     },
     icon: {
         alignSelf: 'flex-end',
         top: -65,
         right: 60,
     },
-    signIn: {
+    signUp: {
+        marginTop: 15,
         textAlign: 'center',
         alignSelf: 'center',
         textAlignVertical: 'center',
@@ -106,24 +110,18 @@ export const SignIn = () => {
         color: '#fff',
     },
     text: {
-        marginTop:40,
+        marginTop:15,
         fontSize: 20,
     },
-    signUp: {
-        marginTop:40,
+    signIn: {
+        marginTop:15,
         fontSize: 20,
         color: '#22aaff',
-    },
-    guest: {
-        marginTop:10,
-        fontSize: 20,
-        color: '#22aaff',
-        textAlign: 'center',
     },
     bottomText: {
-        position: 'absolute',        
+        marginTop: 10,
         marginHorizontal: 50,
         textAlign: 'center',
-        bottom: 25,
+        marginBottom: 20,
     },
   });
