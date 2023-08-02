@@ -44,8 +44,8 @@ export const Card = ({route}) => {
           <Text onPress={decrementCount} style={styles.button} marginLeft={50}>-</Text>
           <Text style={styles.title}>0{count}</Text>
           <Text onPress={incrementCount} style={styles.button} marginLeft={30}>+</Text>
-          <Ionicons name="heart" size={25} style={styles.heart} onPress={handleBackPress}/>
-          <Ionicons name="cart-outline" size={25} style={styles.cart} onPress={handleBackPress}/>
+          <Ionicons name="heart" size={25} style={styles.heart} onPress={()=>navigation.navigate('Favorites')}/>
+          <Ionicons name="cart-outline" size={25} style={styles.cart} onPress={()=>navigation.navigate('CartPage')}/>
           <Text style={styles.buyNow} onPress={() =>navigation.navigate('Address')}>Buy Now</Text>
         </View>
     </View>
