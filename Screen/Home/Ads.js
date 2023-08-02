@@ -18,6 +18,7 @@ export const Ads = () => {
 
     return () => clearInterval(intervalId);
   }, [currentImageIndex]);
+  
 
   return (
     <View style={styles.container}>

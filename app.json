@@ -4,10 +4,10 @@
     "slug": "TuduApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/8.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/tudu-logo.png",
+      "image": "./assets/logo7.png",
       "backgroundColor": "#ffffff",
       "resizeMode": "contain"
     },

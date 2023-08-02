@@ -22,8 +22,8 @@ export const Mobiles = ({imageSource, title,minititle }) => {
             </View>
             <View style={styles.icon}>
             <Ionicons name="chevron-back" marginLeft={-30} size={30} color="#fff" onPress={handleBackPress}/>
-            <Ionicons name="heart" right={-90} marginLeft={10} size={30} color="#fff"/>
-            <Ionicons name="cart" right={-30} marginLeft={10} size={30} color="#fff"/>
+            <Ionicons name="heart" right={-90} marginLeft={10} size={30} color="#fff" onPress={()=>navigation.navigate('Favorites')}/>
+            <Ionicons name="cart" right={-30} marginLeft={10} size={30} color="#fff" onPress={()=>navigation.navigate('CartPage')}/>
             </View>
             <Text style={styles.text}>Categories</Text>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>

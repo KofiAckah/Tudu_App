@@ -43,7 +43,7 @@ export const ShopInfo =[
         region: 'Ashanti Region',
         imageSource:{uri:'https://ghanafinancialmarket.files.wordpress.com/2015/08/img_4349.gif?w=300&h=158&zoom=2'}
     },
-    { // 6.West Hills City Mall
+    { // 7.West Hills City Mall
         shopName: 'West Hills City Mall',
         shopLocation: 'Accra',
         region: 'Greater Accra Region',

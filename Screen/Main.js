@@ -2,8 +2,8 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import 'react-native-gesture-handler';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 
 // Screens
@@ -32,22 +32,22 @@ function Main() {
         initialRouteName={homeName}
         screenOptions={({ route }) => ({
           headerShown: false,
-          tabBarIcon: ({ focused, color, size }) => {
+          tabBarIcon: ({ focused, color }) => {
             let iconName;
             let rn = route.name;
             if (rn === indexName) {
               iconName = focused ? 'home' : 'home-outline';
             } else if (rn === catName) {
-              iconName = focused ? 'list' : 'list-outline';
+              iconName = focused ? 'format-list-bulleted-square' : 'format-list-checkbox';
             }
             else if (rn === shopName) {
-              iconName = focused ? 'card' : 'card';
+              iconName = focused ? 'store' : 'store-outline';
             } else if (rn === favName) {
               iconName = focused ? 'heart' : 'heart-outline';
             } else if (rn === profileName) {
-              iconName = focused ? 'person' : 'person-outline';
+              iconName = focused ? 'account' : 'account-outline';
             }
-            return <Ionicons name={iconName} size={size} color={color} />;
+            return <MaterialCommunityIcons name={iconName} size={32} color={color} />;
           },
         })}
         tabBarOptions={{
