@@ -1,14 +1,14 @@
 // The main file of the app
 import * as React from 'react';
 import Main from './Screen/Main';
-import {View, StyleSheet,Platform,StatusBar } from 'react-native';
+import {SafeAreaView, StyleSheet,Platform,StatusBar } from 'react-native';
 
 
 function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Main />
-    </View>
+    </SafeAreaView>
   );
 }
 
