@@ -120,10 +120,9 @@ export const SignIn = () => {
         color: '#22aaff',
         textAlign: 'center',
     },
-    bottomText: {
-        position: 'absolute',        
+    bottomText: {        
         marginHorizontal: 50,
         textAlign: 'center',
-        bottom: 25,
+        bottom: -90,
     },
   });
