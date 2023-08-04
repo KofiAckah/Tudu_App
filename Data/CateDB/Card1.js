@@ -39,12 +39,6 @@ export const Card1 = ({imageSource, title,minititle }) => {
                 <Text style={styles.textOpacity}>Women Clothings</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.categories} onPress={() => navigation.navigate('Smartphones')}>
-              <Image source={require('../../assets/icon.png')} style={styles.catImages}/>
-              <View style={styles.catOpacity}>
-                <Text style={styles.textOpacity}>Bags & Luggage</Text>
-              </View>
-            </TouchableOpacity>
           </ScrollView>
           <Text style={styles.text}>Best Selling by Categories</Text>
         </ScrollView>

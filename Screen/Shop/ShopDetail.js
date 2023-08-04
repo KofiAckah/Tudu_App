@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View,TouchableOpacity,Image,ScrollView } from 'react-native';
+import { StyleSheet, Linking ,Text, View,TouchableOpacity,Image,ScrollView } from 'react-native';
 import React,{useState} from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useNavigation } from '@react-navigation/native';
 
 export const ShopDetail = ({route}) => {
@@ -11,7 +12,14 @@ export const ShopDetail = ({route}) => {
     const navigation = useNavigation();
     const handleBackPress = () => {
         navigation.navigate('Shop');
-      };
+    };
+    const latitude = '37.7749'; // Replace these with the actual latitude and longitude
+    const longitude = '-122.4194'; // of the location you want to open in Google Maps
+
+    const handleMapPress = () => {
+    Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`)
+        .catch((error) => console.error('Error while opening Google Maps:', error));
+    };
   return (
     <View style={styles.container}>
         <ScrollView>
@@ -28,12 +36,12 @@ export const ShopDetail = ({route}) => {
                 <Text style={styles.title}>{shopName.shopName}</Text>
                 <View flexDirection="row">
                     <View style={styles.items} backgroundColor="blue">
-                        <Ionicons style={styles.connectIcon} name="call-outline" size={30}/>
-                        <Text style={styles.connect}>Call</Text>
+                        <Ionicons style={styles.connectIcon} name="call-outline" size={30} onPress={()=> Linking.openURL(`tel:${+233262092037}`)}/>
+                        <Text style={styles.connect} onPress={()=> Linking.openURL(`tel:${+233262092037}`)}>Call</Text>
                     </View>
                     <View style={styles.items} backgroundColor="red">
-                        <Ionicons style={styles.connectIcon} name="location-outline" size={30}/>
-                        <Text style={styles.connect}>Location</Text>
+                        <Ionicons style={styles.connectIcon} name="location-outline" size={30} onPress={handleMapPress}/>
+                        <Text style={styles.connect} onPress={handleMapPress}>Location</Text>
                     </View>
                     <View style={styles.items} backgroundColor="#ee0">
                         <Ionicons style={styles.connectIcon} name="chatbubble-ellipses-outline" size={30}/>
@@ -47,7 +55,7 @@ export const ShopDetail = ({route}) => {
                 </View>
                 <View style={styles.info}>
                     <View marginTop={10}>
-                        <Ionicons name="home-outline" size={32}/>
+                        <MaterialCommunityIcons name="store" size={32}/>
                     </View>
                     <View marginLeft={10}>
                         <Text style={styles.hours}>Working Hours</Text>
