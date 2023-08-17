@@ -9,6 +9,15 @@ export const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const handleSignInPress = () => {
+      if (email.trim() === '' || password.trim() === '') {
+          // Show an error message or perform some action to handle empty fields.
+          alert('Please fill in all the fields.');
+      } else {
+          navigation.navigate('Home');
+      }
+  };
+
     const handleBackPress = () => {
         navigation.navigate('Profile');
     };
@@ -39,7 +48,7 @@ export const SignIn = () => {
                 <Text style={styles.text}>Don't have an account?</Text>
                 <Text style={styles.signUp} onPress={() => navigation.navigate('SignUp')}>Sign Up</Text>
             </View>
-            <Text style={styles.guest} onPress={() => navigation.navigate('Home')}>Continue as Guest &gt;&gt;&gt;</Text>
+            <Text style={styles.guest} onPress={handleSignInPress}>Continue as Guest &gt;&gt;&gt;</Text>
         </View>
         <Text style={styles.bottomText}>By Continuing you confirm that you agree with our Terms and Conditions</Text>
       </View>

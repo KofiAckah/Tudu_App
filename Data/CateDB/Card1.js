@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export const Card1 = ({imageSource, title,minititle }) => {
+export const Card1 = () => {
   const navigation = useNavigation();
   const handleBackPress = () => {
     navigation.goBack();
