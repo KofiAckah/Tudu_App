@@ -7,7 +7,7 @@ import {SafeAreaView, StyleSheet,Platform,StatusBar } from 'react-native';
 function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Main />
+      <Main/>
     </SafeAreaView>
   );
 }
