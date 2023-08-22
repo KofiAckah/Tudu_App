@@ -47,6 +47,6 @@ export const ShopInfo =[
         shopName: 'West Hills City Mall',
         shopLocation: 'Accra',
         region: 'Greater Accra Region',
-        imageSource:{uri:'https://scontent.xx.fbcdn.net/v/t39.30808-6/330853446_845024223263960_7247478020797296166_n.jpg?_nc_cat=100&cb=99be929b-3346023f&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFCRABCKCy6GXH6wn9fRGGPVo-aeuZOkiBWj5p65k6SIDKmazFgNGZ8wkAhMf1EkbT4PUwrah4ChtQjnn6LYAqA&_nc_ohc=eGFpoAWCkK8AX8RP3Pg&_nc_ht=scontent.xx&oh=00_AfCLMglMWLTGiP3kBY9UqOR6EJj6tvfTInnjs0wOUjmH1g&oe=64B9DF6A'}
+        imageSource:{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN9UnAw29uGo1Nrz5z8Ud13JN-3_MUpIFjavuoRRyoy5TfK-E5WbMKyj_8JKSoqO-WtM4&usqp=CAU'}
     },
 ]

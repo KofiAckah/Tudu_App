@@ -396,4 +396,61 @@ export const Details =[
         minititle: "HP Laptop Core i7",
         imageSource: {uri:'https://www.hp.com/de-de/shop/Html/Merch/Images/c07961071_1750x1285.jpg?imwidth=869'}
     },
+    // Beads
+    {  // 77.Friendship Beads
+        title: "GHS 230.00",
+        minititle: "Friendship Beads",
+        imageSource: {uri:'https://cdn.pixabay.com/photo/2017/03/19/10/47/friendship-2156172_640.jpg'}
+    },
+    // Painting
+    {  // 78.Raindow Tabby Cat
+        title: "GHS 1,250.00",
+        minititle: "Raindow Tabby Cat",
+        imageSource: {uri:'https://i.pinimg.com/236x/85/43/44/85434423b1efc92df5efd6f39fb39aae.jpg'}
+    },
+    {  // 79.Ink Painting
+        title: "GHS 950.00",
+        minititle: "Ink Painting",
+        imageSource: {uri:'https://images.pexels.com/photos/2911546/pexels-photo-2911546.jpeg?auto=compress&cs=tinysrgb&w=400'}
+    },
+    {  // 80.Pop Painting
+        title: "GHS 1,250.00",
+        minititle: "Pop Painting",
+        imageSource: {uri:'https://images.pexels.com/photos/3063362/pexels-photo-3063362.jpeg?auto=compress&cs=tinysrgb&w=400'}
+    },
+    {  // 81.Colourful Girl Face
+        title: "GHS 1,750.00",
+        minititle: "Colourful Girl Face",
+        imageSource: {uri:'https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_640.jpg'}
+    },
+    {  // 82.Colorful Painting
+        title: "GHS 1,200.00",
+        minititle: "Colorful Painting",
+        imageSource: {uri:'https://cdn.pixabay.com/photo/2017/07/03/20/17/colorful-2468874_640.jpg'}
+    },
+    {  // 83.Water Painting
+        title: "GHS 1,050.00",
+        minititle: "Water Painting",
+        imageSource: {uri:'https://cdn.pixabay.com/photo/2017/08/25/18/48/watercolor-2681039_640.jpg'}
+    },
+    {  // 84.Flower Abstract
+        title: "GHS 800.00",
+        minititle: "Flower Abstract",
+        imageSource: {uri:'https://cdn.pixabay.com/photo/2017/05/25/09/22/flower-2342706_640.jpg'}
+    },
+    {  // 85.Water Texture
+        title: "GHS 550.00",
+        minititle: "Water Texture",
+        imageSource: {uri:'https://cdn.pixabay.com/photo/2020/04/19/08/17/watercolor-5062356_640.jpg'}
+    },
+    {  // 86.Arylic Painting Art
+        title: "GHS 2,000.00",
+        minititle: "Arylic Painting Art",
+        imageSource: {uri:'https://cdn.pixabay.com/photo/2019/04/26/17/47/color-4158152_640.jpg'}
+    },
+    {  // 87.Water Painting
+        title: "GHS 1,050.00",
+        minititle: "Water Painting",
+        imageSource: {uri:'https://cdn.pixabay.com/photo/2017/08/25/18/48/watercolor-2681039_640.jpg'}
+    },
 ]

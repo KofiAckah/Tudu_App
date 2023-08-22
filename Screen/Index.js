@@ -24,12 +24,14 @@ import { WomenFashion } from '../Data/CateDB/WomenFashion';
 import { Sports } from '../Data/CateDB/Sports';
 
 // Importing Screen for each Special
+import { ArtSupplies } from './Special/ArtSupplies';
 import { Bags } from './Special/Bags';
 import { BabyClothings } from './Special/BabyClothings';
 import { BabyToys } from './Special/BabyToys';
 import { BrandComputer } from './Special/BrandComputer';
 import { ComputerAss } from './Special/ComputerAss';
 import { Fruits } from './Special/Fruits';
+import { Painting } from './Special/Painting';
 import { PhoneCases } from './Special/PhoneCases';
 import { Smartphones } from './Special/Smartphones';
 import { Womencloth } from './Special/Womencloth';
@@ -69,12 +71,14 @@ export const Index = () => {
       <Stack.Screen name="WomenFashion" component={WomenFashion} />
       <Stack.Screen name="Sports" component={Sports} />
       {/* Screen for each Special */}
+      <Stack.Screen name="ArtSupplies" component={ArtSupplies} />
       <Stack.Screen name="Bags" component={Bags} />
       <Stack.Screen name="BabyClothings" component={BabyClothings} />
       <Stack.Screen name="BabyToys" component={BabyToys} />
       <Stack.Screen name="BrandComputer" component={BrandComputer} />
       <Stack.Screen name="ComputerAss" component={ComputerAss} />
       <Stack.Screen name="Fruits" component={Fruits} />
+      <Stack.Screen name="Painting" component={Painting} />
       <Stack.Screen name="PhoneCases" component={PhoneCases} />
       <Stack.Screen name="Smartphones" component={Smartphones} />
       <Stack.Screen name="Womencloth" component={Womencloth} />

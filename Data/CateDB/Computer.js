@@ -31,7 +31,7 @@ export const Computer = ({imageSource, title,minititle }) => {
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.categories} onPress={() => navigation.navigate('BrandComputer')}>
-              <Image source={{uri:'https://media.istockphoto.com/id/1048954912/photo/assorted-vegetables.jpg?b=1&s=170667a&w=0&k=20&c=7F8qADcr_mjdIyInpD1sbGSGj8nxiIwhGrZHPkzQs3Q='}} style={styles.catImages}/>
+              <Image source={{uri:'https://helpdeskgeek.com/wp-content/pictures/2022/05/make-model.jpeg'}} style={styles.catImages}/>
               <View style={styles.catOpacity}>
                 <Text style={styles.textOpacity}>Computer Brands</Text>
               </View>

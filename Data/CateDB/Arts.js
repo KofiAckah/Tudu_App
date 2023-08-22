@@ -1,9 +1,9 @@
-import { ScrollView,StyleSheet, Text, View,Image } from 'react-native'
+import { ScrollView,StyleSheet, Text, View,Image,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export const Arts = ({imageSource, title,minititle }) => {
+export const Arts = () => {
   const navigation = useNavigation();
   const handleBackPress = () => {
     navigation.navigate('Cat');
@@ -22,6 +22,21 @@ export const Arts = ({imageSource, title,minititle }) => {
             <Ionicons name="heart" right={-90} marginLeft={10} size={30} color="#fff" onPress={()=>navigation.navigate('Favorites')}/>
             <Ionicons name="cart" right={-30} marginLeft={10} size={30} color="#fff" onPress={()=>navigation.navigate('CartPage')}/>
           </View>
+          <Text style={styles.text}>Categories</Text>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <TouchableOpacity style={styles.categories} onPress={() => navigation.navigate('ArtSupplies')}>
+              <Image source={{uri:'https://cdn.pixabay.com/photo/2016/11/19/17/28/art-1840481_640.jpg'}} style={styles.catImages}/>
+              <View style={styles.catOpacity}>
+                <Text style={styles.textOpacity}>Art Supplies</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.categories} onPress={() => navigation.navigate('Painting')}>
+              <Image source={{uri:'https://i.pinimg.com/236x/4a/f0/15/4af0151649e2dd07b072ee2e2cf9512b.jpg'}} style={styles.catImages}/>
+              <View style={styles.catOpacity}>
+                <Text style={styles.textOpacity}>Painting</Text>
+              </View>
+            </TouchableOpacity>
+          </ScrollView>
         </ScrollView>
     </View>
   )
@@ -29,7 +44,6 @@ export const Arts = ({imageSource, title,minititle }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0ff',
     tabBarVisible: false,
     hideNavigation: "none",
   },
@@ -76,5 +90,41 @@ const styles = StyleSheet.create({
     bottom: 30,
     color: '#fff',
     fontWeight: 500,
+  },
+  text:{
+    fontSize: 20,
+    marginLeft: 20,
+    marginTop: 20,
+    fontWeight: 600,
+    color: '#4f4f4f',
+  },
+  categories:{
+    height: 140,
+    width: 120,
+    marginHorizontal: 20,
+    marginTop: 10,
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+  },
+  catImages:{
+    height: 140,
+    width: 120,
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+  },
+  catOpacity:{
+    position: 'absolute',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    height: 60,
+    width: "100%",
+    alignSelf: 'flex-end',
+    bottom: 0,
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+  },
+  textOpacity:{
+    fontSize: 18,
+    marginLeft: 7,
+    color: '#fff',
   },
 });
