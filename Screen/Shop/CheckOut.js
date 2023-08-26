@@ -43,7 +43,7 @@ export const CheckOut = () => {
             <Ionicons name="gift" size={40} style={styles.delivery}/>
             <View marginLeft={15} marginTop={15}>
                 <Text style={styles.estimate}>GHS 0.00 (Estimate)</Text>
-                <Text style={styles.address}>Expected delivery on Fri, 28th July</Text>
+                <Text style={styles.address}>Expected delivery on Thu, 31st Aug</Text>
             </View>
         </View>
         <View style={styles.textLabel}>
