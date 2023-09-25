@@ -164,7 +164,7 @@ export const Details =[
         imageSource: {uri:'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-pro-max-gold-2023?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1679072988850'}
     },
     {  // 32.iPhone 14
-        title: "GHS 2,599.00",
+        title: "GHS 2,999.00",
         minititle: "iPhone 14",
         imageSource: {uri:'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-model-unselect-gallery-2-202303_GEO_EMEA?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1676930655577'}
     },
